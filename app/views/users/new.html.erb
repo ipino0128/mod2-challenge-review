@@ -1,0 +1,13 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%if flash[:message] %>
+    <%= flash[:message] %>
+<%end %>
+
+<%= form_for @user do |f| %>
+    Name: <%=f.text_field :name %>
+    Age: <%=f.number_field :age %>
+    <%=f.submit 'Submit user' %>
+<% end %>
+    
